@@ -1,0 +1,24 @@
+Nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: large;
+}
+
+.Nav_linksContainer {
+  display: inline;
+  align-self: center;
+  font-size: medium;
+}
+
+#Nav_signUp {
+  font-size: medium;
+  padding: 0 1em;
+}
+
+.Nav_links {
+  text-decoration: none;
+  color: inherit;
+}
