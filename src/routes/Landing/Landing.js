@@ -1,9 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import NavBar from '../../components/NavBar/NavBar';
+import MealsService from '../../services/meals-service';
+import { updateMeals } from '../../actions/index';
+import { useMountEffect } from '../../constants/hooks';
 import './Landing.css';
 
-export default function Landing() {
+const mapDispatchToProps = (dispatch) => ({ updateMeals: (meals) => dispatch(updateMeals(meals)) });
+
+const ConnectedLanding = (props) => {
+  useMountEffect(() => {
+    const fetchData = async () => {
+      const res = await MealsService.getDemo();
+      const newArr = res.hits.map((obj) => ({ ...obj, isActive: false }));
+      props.updateMeals(newArr);
+    };
+    fetchData();
+  });
+
   return (
     <>
       <section className="Landing_section">
@@ -24,4 +39,8 @@ export default function Landing() {
       </section>
     </>
   );
-}
+};
+
+const Landing = connect(null, mapDispatchToProps)(ConnectedLanding);
+
+export default Landing;

@@ -10,7 +10,7 @@ export default function NavBar() {
         <button className="button" id="Nav_signUp" type="button">Sign Up</button>
         <Link to="/dashboard" className="Nav_links">Dashboard</Link>
         <Link to="/meals" className="Nav_links">Meals</Link>
-        <Link to="/quiz" className="Nav_links">New</Link>
+        <Link to="/quiz" className="Nav_links">Biometrics</Link>
       </div>
     </nav>
   );

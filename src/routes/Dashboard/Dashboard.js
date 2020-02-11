@@ -41,6 +41,7 @@ const connectedDashboard = ({ macros }) => (
         {Math.round(macros.TDEE / 3)}
       </div>
     </section>
+    <br />
     <section>
       <div>
           replace with canvas element visually describing above

@@ -36,85 +36,83 @@ const ConnectedAnthropometric = (props) => {
   return (
     <>
       <NavBar />
-      <section>
-        <form onSubmit={handleSubmit}>
-          <ul>
-            <li>
-              <label htmlFor="height">
-                height(in)
-                <input
-                  id="height"
-                  type="number"
-                  name="field1"
-                  onChange={(e) => setHeight(e.target.value)}
-                />
-              </label>
-            </li>
-            <li>
-              <label htmlFor="weight">
-                weight(lbs)
-                <input
-                  id="weight"
-                  type="number"
-                  name="field2"
-                  onChange={(e) => setWeight(e.target.value)}
-                />
-              </label>
-            </li>
-            <li>
-              <label htmlFor="age">
-                age(yrs)
-                <input
-                  id="age"
-                  type="number"
-                  name="field3"
-                  onChange={(e) => setAge(e.target.value)}
-                />
-              </label>
-            </li>
-            <li>
-              <label htmlFor="sex">
-                sex
-                <select
-                  id="sex"
-                  name="field4"
-                  value={sex}
-                  onChange={(e) => setSex(e.target.value)}
-                >
-                  <option value="male">male</option>
-                  <option value="female">female</option>
-                </select>
-              </label>
-            </li>
-            <li>
-              <label htmlFor="activity">
-                activity level
-                <select
-                  id="activity"
-                  name="field5"
-                  value={active}
-                  onChange={(e) => setActive(e.target.value)}
-                >
-                  <option value={1.2}>sedentary</option>
-                  <option value={1.4}>slightly active</option>
-                  <option value={1.6}>moderately active</option>
-                  <option value={1.75}>very active</option>
-                  <option value={2}>extra active</option>
-                  <option value={2.3}>pro athlete</option>
-                </select>
-              </label>
-            </li>
-            <li>
-              <button
-                type="submit"
-                className="button"
+      <form onSubmit={handleSubmit}>
+        <ul>
+          <li>
+            <label htmlFor="height">
+              height(in)
+              <input
+                id="height"
+                type="number"
+                name="field1"
+                onChange={(e) => setHeight(e.target.value)}
+              />
+            </label>
+          </li>
+          <li>
+            <label htmlFor="weight">
+              weight(lbs)
+              <input
+                id="weight"
+                type="number"
+                name="field2"
+                onChange={(e) => setWeight(e.target.value)}
+              />
+            </label>
+          </li>
+          <li>
+            <label htmlFor="age">
+              age(yrs)
+              <input
+                id="age"
+                type="number"
+                name="field3"
+                onChange={(e) => setAge(e.target.value)}
+              />
+            </label>
+          </li>
+          <li>
+            <label htmlFor="sex">
+              sex
+              <select
+                id="sex"
+                name="field4"
+                value={sex}
+                onChange={(e) => setSex(e.target.value)}
               >
-                Submit
-              </button>
-            </li>
-          </ul>
-        </form>
-      </section>
+                <option value="male">male</option>
+                <option value="female">female</option>
+              </select>
+            </label>
+          </li>
+          <li>
+            <label htmlFor="activity">
+              activity level
+              <select
+                id="activity"
+                name="field5"
+                value={active}
+                onChange={(e) => setActive(e.target.value)}
+              >
+                <option value={1.2}>sedentary</option>
+                <option value={1.4}>slightly active</option>
+                <option value={1.6}>moderately active</option>
+                <option value={1.75}>very active</option>
+                <option value={2}>extra active</option>
+                <option value={2.3}>pro athlete</option>
+              </select>
+            </label>
+          </li>
+          <li>
+            <button
+              type="submit"
+              className="button"
+            >
+              Submit
+            </button>
+          </li>
+        </ul>
+      </form>
     </>
   );
 };
