@@ -5,51 +5,49 @@ import './Dashboard.css';
 
 const mapStateToProps = (state) => ({ macros: state.macros });
 
-const connectedDashboard = ({ macros }) => {
-  return (
-    <>
-      <NavBar />
-      <section>
-        <div>
+const connectedDashboard = ({ macros }) => (
+  <>
+    <NavBar />
+    <section>
+      <div>
           Protein
-          {' '}
-          {Math.round(macros.protein / 4)}
+        {' '}
+        {Math.round(macros.protein / 4)}
           (g)
-        </div>
-        <div>
+      </div>
+      <div>
           Carbohydrates
-          {' '}
-          {Math.round(macros.carb / 4)}
+        {' '}
+        {Math.round(macros.carb / 4)}
           (g)
-        </div>
-        <div>
+      </div>
+      <div>
           Fats
-          {' '}
-          {Math.round(macros.fat / 9)}
+        {' '}
+        {Math.round(macros.fat / 9)}
           (g)
-        </div>
-      </section>
-      <section>
-        <div>
+      </div>
+    </section>
+    <section>
+      <div>
           TDEE
-          {' '}
-          {Math.round(macros.TDEE)}
+        {' '}
+        {Math.round(macros.TDEE)}
           kCal
-        </div>
-        <div>
+      </div>
+      <div>
           kCal per meal
-          {' '}
-          {Math.round(macros.TDEE / 3)}
-        </div>
-      </section>
-      <section>
-        <div>
+        {' '}
+        {Math.round(macros.TDEE / 3)}
+      </div>
+    </section>
+    <section>
+      <div>
           replace with canvas element visually describing above
-        </div>
-      </section>
-    </>
-  );
-};
+      </div>
+    </section>
+  </>
+);
 
 const Dashboard = connect(mapStateToProps)(connectedDashboard);
 
