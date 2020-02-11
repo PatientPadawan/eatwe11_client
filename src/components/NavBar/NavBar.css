@@ -15,10 +15,11 @@ h1 {
 
 #Nav_signUp {
   font-size: medium;
-  padding: 0 1em;
+  padding: 0 1em 0 0;
 }
 
 .Nav_links {
   text-decoration: none;
   color: inherit;
+  padding: 0 1em 0 0;
 }

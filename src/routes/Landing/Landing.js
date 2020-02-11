@@ -16,11 +16,11 @@ export default function Landing() {
               fit your specific profile. Transform your diet into a personalized meal plan.
             </span>
           </h2>
-          <Link className="button buttonWhite capitalize">explore eatwe11</Link>
+          <Link to="/dashboard" className="button buttonWhite capitalize">explore eatwe11</Link>
         </div>
       </section>
       <section>
-        
+        Enter more sections explaining app
       </section>
     </>
   );
