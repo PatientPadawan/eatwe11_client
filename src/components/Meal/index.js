@@ -67,12 +67,18 @@ const Meal = ({
         </div>
         <div className="mealsButtonsContainer">
           <div className="mealsDirectionBtnContainer">
-            <button type="button" className="mealsDirectionBtn">
+            <button
+              type="button"
+              className="mealsDirectionBtn"
+              onClick={(e) => {
+                e.stopPropagation();
+                e.nativeEvent.stopImmediatePropagation();
+              }}
+            >
               <a
                 href={meals.recipe.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=""
               >
                 View directions
               </a>
