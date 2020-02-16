@@ -1,6 +1,15 @@
 * {
-  background-color: #658c11;
   box-sizing: border-box;
+}
+
+html {
+  background-color: #15D18F;
+  color: white;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
 }
 
 body {
@@ -21,6 +30,8 @@ code {
   border: none;
   text-decoration: none;
   display: inline-block;
+  background-color: inherit;
+  color: unset;
 }
 
 .Landing_section {
@@ -28,7 +39,7 @@ code {
   height: 100vh;
 }
 
-.capitalize {
+.uppercase {
   text-transform: uppercase;
 }
 
@@ -55,7 +66,75 @@ code {
 }
 
 .meals {
-  padding: 1em 1em 0;
+  padding: 1em 1em;
+  margin: 1em 1em;
+  border-radius: 3px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.mealsTitle {
+  font-size: large;
+  align-self: center;
+  text-transform: capitalize;
+}
+
+.mealsCalContainer {
+  margin: 0 auto 0.5em auto;
+}
+
+.mealsMacroContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 1em 0;
+}
+
+.mealsMacronutrient {
+  /* empty right meow */
+}
+
+.mealsCollapseContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.mealsDirectionBtn {
+  font-size: 17px;
+  background-color: white;
+  color: #109E6C;
+  border: none;
+}
+
+.mealsDirectionBtnContainer {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 3px;
+  width: 195px;
+  margin: 0.5em auto;
+  padding: 9px 15px;
+  line-height: 20px;
+}
+
+.mealsImage {
+  width: 60vw;
+  border-radius: 3px;
+}
+
+.mealsImageContainer {
+  margin: auto;
+}
+
+.mealsSearchForm {
+  text-align: center;
+}
+
+.gradientBox {
+  background: linear-gradient(to bottom right,#109E6C 0,#215240);
 }
 
 Nav {

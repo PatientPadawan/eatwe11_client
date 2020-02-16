@@ -7,6 +7,7 @@ const MealsList = ({
   meals,
   macros,
   updateMeals,
+  toggleMeal
 }) => {
   const [query, setQuery] = useState('chicken');
 
@@ -24,7 +25,7 @@ const MealsList = ({
   return (
     <>
       <NavBar />
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="mealsSearchForm">
         <input
           type="text"
           id="query"
@@ -38,14 +39,13 @@ const MealsList = ({
           search
         </button>
       </form>
-      <section>
-        {meals.map((el, i) => (
-          <Meal
-            key={el.recipe.uri}
-            meals={meals[i]}
-          />
-        ))}
-      </section>
+      {meals.map((el, i) => (
+        <Meal
+          key={el.recipe.uri}
+          meals={meals[i]}
+          toggleMeal={toggleMeal}
+        />
+      ))}
     </>
   );
 };

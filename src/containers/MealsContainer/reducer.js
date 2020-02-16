@@ -8,18 +8,15 @@ const meals = (state = [], action) => {
     case RECEIVED_ALL_MEALS:
       return [...action.meals];
     case TOGGLE_MEAL:
-      return {
-        ...state,
-        meals: state.meals.map((recipe) => {
-          if (recipe.uri !== action.uri) {
-            return recipe;
-          }
-          return {
-            ...recipe,
-            isActive: !recipe.isActive,
-          };
-        }),
-      };
+      return state.map((el) => {
+        if (el.recipe.uri !== action.uri) {
+          return el;
+        }
+        return {
+          ...el,
+          isActive: !el.isActive,
+        };
+      });
     default: return state;
   }
 };

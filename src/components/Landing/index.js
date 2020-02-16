@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import NavBar from '../NavBar';
-import { useMountEffect } from '../../services/hooks';
+import useMountEffect from '../../hooks/mountEffect';
 import MealsService from '../../services/meals-service';
 
 
@@ -30,7 +30,7 @@ const Landing = ({
               fit your specific profile. Transform your diet into a personalized meal plan.
             </span>
           </h2>
-          <Link to="/dashboard" className="button buttonWhite capitalize">explore eatwe11</Link>
+          <Link to="/dashboard" className="button uppercase">explore eatwe11</Link>
         </div>
       </section>
       <section>
