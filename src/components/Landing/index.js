@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import NavBar from '../NavBar';
 import useMountEffect from '../../hooks/mountEffect';
+import useScript from '../../hooks/useScript';
 import MealsService from '../../services/meals-service';
 
 
@@ -17,6 +18,8 @@ const Landing = ({
     };
     fetchData();
   });
+  useScript('https://cdn.whisk.com/sdk/shopping-list.js');
+
 
   return (
     <>

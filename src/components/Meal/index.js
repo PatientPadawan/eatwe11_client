@@ -1,13 +1,11 @@
 import React from 'react';
 
-import useScript from '../../hooks/useScript';
 import useMountEffect from '../../hooks/mountEffect';
 
 const Meal = ({
   meals,
   toggleMeal,
 }) => {
-  useScript('https://cdn.whisk.com/sdk/shopping-list.js');
   useMountEffect(() => {
     const whisk = window.whisk || {};
     whisk.queue = whisk.queue || [];
