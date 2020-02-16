@@ -1,5 +1,4 @@
 import React from 'react';
-import './Meal.css';
 
 export default function Meal({
   meals,

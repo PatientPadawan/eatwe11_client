@@ -1,0 +1,2 @@
+export const RECEIVED_ALL_MEALS = 'RECEIVED_ALL_MEALS';
+export const TOGGLE_MEAL = 'TOGGLE_MEAL';

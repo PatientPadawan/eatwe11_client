@@ -1,20 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import NavBar from '../../components/NavBar/NavBar';
+
+import NavBar from '../NavBar';
+import { useMountEffect } from '../../services/hooks';
 import MealsService from '../../services/meals-service';
-import { updateMeals } from '../../actions/index';
-import { useMountEffect } from '../../constants/hooks';
-import './Landing.css';
 
-const mapDispatchToProps = (dispatch) => ({ updateMeals: (meals) => dispatch(updateMeals(meals)) });
 
-const ConnectedLanding = (props) => {
+const Landing = ({
+  updateMeals
+}) => {
   useMountEffect(() => {
     const fetchData = async () => {
       const res = await MealsService.getDemo();
       const newArr = res.hits.map((obj) => ({ ...obj, isActive: false }));
-      props.updateMeals(newArr);
+      updateMeals(newArr);
     };
     fetchData();
   });
@@ -40,7 +39,5 @@ const ConnectedLanding = (props) => {
     </>
   );
 };
-
-const Landing = connect(null, mapDispatchToProps)(ConnectedLanding);
 
 export default Landing;

@@ -12,3 +12,6 @@ export const toggleMeal = (uri) => ({
   type: 'TOGGLE_MEAL',
   uri,
 });
+
+
+// DELETE ALL DESE

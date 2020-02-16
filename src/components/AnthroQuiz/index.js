@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import NavBar from '../../components/NavBar/NavBar';
-import { updateMacros } from '../../actions/index';
-import './Anthropometric.css';
+import NavBar from '../NavBar';
 
-const mapDispatchToProps = (dispatch) => ({ updateMacros: (macros) => dispatch(updateMacros(macros)) });
-
-const ConnectedAnthropometric = (props) => {
+const AnthroQuiz = ({
+  updateMacros,
+}) => {
   const [age, setAge] = useState();
   const [sex, setSex] = useState('male');
   const [active, setActive] = useState(1.2);
@@ -30,7 +27,7 @@ const ConnectedAnthropometric = (props) => {
       carb: (TDEE * 0.60),
       fat: (TDEE * 0.25),
     };
-    props.updateMacros(macros);
+    updateMacros(macros);
   };
 
   return (
@@ -117,6 +114,4 @@ const ConnectedAnthropometric = (props) => {
   );
 };
 
-const Anthropometric = connect(null, mapDispatchToProps)(ConnectedAnthropometric);
-
-export default Anthropometric;
+export default AnthroQuiz;

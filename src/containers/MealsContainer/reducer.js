@@ -1,10 +1,13 @@
-const rootReducer = (state = [], action) => {
+import {
+  RECEIVED_ALL_MEALS,
+  TOGGLE_MEAL,
+} from './constants';
+
+const meals = (state = [], action) => {
   switch (action.type) {
-    case 'RECEIVED_ALL_MEALS':
-      return { ...state, meals: action.meals };
-    case 'RECEIVED_ALL_MACROS':
-      return { ...state, macros: action.macros };
-    case 'TOGGLE_MEAL':
+    case RECEIVED_ALL_MEALS:
+      return [...action.meals];
+    case TOGGLE_MEAL:
       return {
         ...state,
         meals: state.meals.map((recipe) => {
@@ -21,4 +24,4 @@ const rootReducer = (state = [], action) => {
   }
 };
 
-export default rootReducer;
+export default meals;

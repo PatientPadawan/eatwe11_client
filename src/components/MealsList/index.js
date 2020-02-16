@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import Meal from '../../components/Meal/Meal';
-import NavBar from '../../components/NavBar/NavBar';
+import Meal from '../Meal';
+import NavBar from '../NavBar';
 import MealsService from '../../services/meals-service';
-import { updateMeals } from '../../actions/index';
-import './Meals.css';
 
-const mapStateToProps = (state) => ({
-  meals: state.meals,
-  macros: state.macros,
-});
-
-const mapDispatchToProps = (dispatch) => ({ updateMeals: (meals) => dispatch(updateMeals(meals)) });
-
-const ConnectedMeals = ({
+const MealsList = ({
   meals,
   macros,
   updateMeals,
@@ -60,6 +50,4 @@ const ConnectedMeals = ({
   );
 };
 
-const Meals = connect(mapStateToProps, mapDispatchToProps)(ConnectedMeals);
-
-export default Meals;
+export default MealsList;

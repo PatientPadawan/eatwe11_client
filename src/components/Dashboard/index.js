@@ -1,11 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import NavBar from '../../components/NavBar/NavBar';
-import './Dashboard.css';
+import NavBar from '../NavBar';
 
-const mapStateToProps = (state) => ({ macros: state.macros });
-
-const connectedDashboard = ({ macros }) => (
+const Dashboard = ({ macros }) => (
   <>
     <NavBar />
     <section>
@@ -49,7 +45,5 @@ const connectedDashboard = ({ macros }) => (
     </section>
   </>
 );
-
-const Dashboard = connect(mapStateToProps)(connectedDashboard);
 
 export default Dashboard;

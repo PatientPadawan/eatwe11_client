@@ -1,5 +1,5 @@
 * {
-  background-color: #A3BF3B;
+  background-color: #658c11;
   box-sizing: border-box;
 }
 
@@ -21,4 +21,65 @@ code {
   border: none;
   text-decoration: none;
   display: inline-block;
+}
+
+.Landing_section {
+  border: solid 1px black;
+  height: 100vh;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+.Landing_heading {
+  display: block;
+  font-size: x-large;
+  text-align: center;
+}
+
+.Landing_headingText {
+  display: block;
+  font-size: medium;
+  font-weight: normal;
+  text-align: center;
+  padding: 0.7em 1em;
+  line-height: 1.5;
+}
+
+.Landing_headingContainer {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meals {
+  padding: 1em 1em 0;
+}
+
+Nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+#logo {
+  font-size: large;
+}
+
+.Nav_linksContainer {
+  display: inline;
+  align-self: center;
+  font-size: medium;
+}
+
+#Nav_signUp {
+  font-size: medium;
+  padding: 0 1em 0 0;
+}
+
+.Nav_links {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 1em 0 0;
 }
