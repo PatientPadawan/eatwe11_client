@@ -1,9 +1,12 @@
 import React from 'react';
 import NavBar from '../NavBar';
 
-const Dashboard = ({ macros }) => (
+const Dashboard = ({
+  macros,
+  location
+}) => (
   <>
-    <NavBar />
+    <NavBar location={location} />
     <section>
       <div>
           Protein

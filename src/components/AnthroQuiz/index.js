@@ -3,6 +3,7 @@ import NavBar from '../NavBar';
 
 const AnthroQuiz = ({
   updateMacros,
+  location,
 }) => {
   const [age, setAge] = useState();
   const [sex, setSex] = useState('male');
@@ -32,7 +33,7 @@ const AnthroQuiz = ({
 
   return (
     <>
-      <NavBar />
+      <NavBar location={location} />
       <form onSubmit={handleSubmit}>
         <ul>
           <li>

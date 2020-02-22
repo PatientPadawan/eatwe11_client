@@ -9,6 +9,7 @@ import MealsList from '../../components/MealsList';
 const mapStateToProps = (state) => ({
   meals: state.meals,
   macros: state.macros,
+  location: state.router.location.pathname,
 });
 
 const mapDispatchToProps = (dispatch) => ({

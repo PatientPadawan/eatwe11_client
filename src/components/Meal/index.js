@@ -27,7 +27,7 @@ const Meal = ({
 
   return (
     <section className="meals gradientBox" onClick={() => toggleMeal(meals.recipe.uri)}>
-      <h2 className="mealsTitle">
+      <h2 className="mealsTitle capitalize">
         {meals.recipe.label}
       </h2>
       <div className="mealsCalContainer">

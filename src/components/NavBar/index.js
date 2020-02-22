@@ -1,16 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function NavBar() {
+import RegisterForm from '../RegisterForm';
+
+const NavBar = ({
+  location,
+  toggleModal,
+  modal,
+}) => {
+  const navLinks = (currentLocation) => {
+    const routes = ['dashboard', 'meals', 'quiz'];
+    const links = [];
+
+    (currentLocation === '/') ? links.push(
+      <RegisterForm key="sign-up" toggleModal={toggleModal} modal={modal} />,
+      <Link
+        key="demo"
+        to="/dashboard"
+        className="Nav_links capitalize"
+      >
+        demo
+      </Link>,
+    ) : routes.forEach((route) => links.push(
+      <Link
+        key={route}
+        to={`/${route}`}
+        className={`Nav_links capitalize ${(currentLocation === `/${route}`) ? 'selected' : ''}`}
+      >
+        {`${route}`}
+      </Link>,
+    ));
+    return links;
+  };
+
   return (
     <nav role="navigation">
       <Link to="/" className="Nav_links"><h1 id="logo">EATWE11</h1></Link>
       <div className="Nav_linksContainer">
-        <button className="button" id="Nav_signUp" type="button">Sign Up</button>
-        <Link to="/dashboard" className="Nav_links">Dashboard</Link>
-        <Link to="/meals" className="Nav_links">Meals</Link>
-        <Link to="/quiz" className="Nav_links">Biometrics</Link>
+        {navLinks(location)}
       </div>
     </nav>
   );
-}
+};
+
+export default NavBar;

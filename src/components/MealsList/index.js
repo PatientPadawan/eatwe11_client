@@ -6,6 +6,7 @@ import MealsService from '../../services/meals-service';
 const MealsList = ({
   meals,
   macros,
+  location,
   updateMeals,
   toggleMeal
 }) => {
@@ -24,7 +25,7 @@ const MealsList = ({
 
   return (
     <>
-      <NavBar />
+      <NavBar location={location} />
       <form onSubmit={handleSubmit} className="mealsSearchForm">
         <input
           type="text"
