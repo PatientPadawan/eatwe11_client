@@ -8,7 +8,7 @@ const MealsList = ({
   macros,
   location,
   updateMeals,
-  toggleMeal
+  toggleMeal,
 }) => {
   const [query, setQuery] = useState('chicken');
 

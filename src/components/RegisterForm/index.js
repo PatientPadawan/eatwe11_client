@@ -9,8 +9,6 @@ const RegisterForm = ({
   toggleModal,
   modal,
 }) => {
-  const node = useRef();
-
   useEffect(() => {
     const handleClick = (e) => {
       if (node.current.contains(e.target)) {
@@ -30,6 +28,7 @@ const RegisterForm = ({
       document.removeEventListener('mousedown', handleClick);
     };
   }, [modal, toggleModal]);
+  const node = useRef();
 
   return (
     <>
@@ -39,7 +38,7 @@ const RegisterForm = ({
         id="Nav_signUp"
         type="button"
       >
-      Sign Up
+        Sign Up
       </button>
       {modal && (
         <Modal viewStyle="Landing_modal" node={node}>

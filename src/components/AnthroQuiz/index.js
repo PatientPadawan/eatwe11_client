@@ -35,7 +35,7 @@ const AnthroQuiz = ({
     <>
       <NavBar location={location} />
       <form onSubmit={handleSubmit}>
-        <ul>
+        <ul className="Anthro_list">
           <li>
             <label htmlFor="height">
               height(in)

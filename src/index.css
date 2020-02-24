@@ -38,6 +38,10 @@ code {
   text-decoration: underline;
 }
 
+.Anthro_list {
+  list-style: none;
+}
+
 .Landing_section {
   border: solid 1px black;
   height: 100vh;

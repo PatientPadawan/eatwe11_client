@@ -1,50 +1,50 @@
 import React from 'react';
 import NavBar from '../NavBar';
 
+import DashboardCanvas from '../DashboardCanvas';
+
 const Dashboard = ({
   macros,
-  location
+  location,
 }) => (
   <>
     <NavBar location={location} />
     <section>
       <div>
-          Protein
+        Protein
         {' '}
         {Math.round(macros.protein / 4)}
-          (g)
+        (g)
       </div>
       <div>
-          Carbohydrates
+        Carbohydrates
         {' '}
         {Math.round(macros.carb / 4)}
-          (g)
+        (g)
       </div>
       <div>
-          Fats
+        Fats
         {' '}
         {Math.round(macros.fat / 9)}
-          (g)
+        (g)
       </div>
     </section>
     <section>
       <div>
-          TDEE
+        TDEE
         {' '}
         {Math.round(macros.TDEE)}
-          kCal
+        kCal
       </div>
       <div>
-          kCal per meal
+        kCal per meal
         {' '}
         {Math.round(macros.TDEE / 3)}
       </div>
     </section>
     <br />
     <section>
-      <div>
-          replace with canvas element visually describing above
-      </div>
+      <DashboardCanvas />
     </section>
   </>
 );
