@@ -23,7 +23,6 @@ const Landing = ({
   });
   useScript('https://cdn.whisk.com/sdk/shopping-list.js');
 
-
   return (
     <>
       <section className={`Landing_section ${(modal) && 'blurred'}`}>

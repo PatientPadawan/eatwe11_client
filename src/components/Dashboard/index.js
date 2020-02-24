@@ -1,6 +1,5 @@
 import React from 'react';
 import NavBar from '../NavBar';
-
 import DashboardCanvas from '../DashboardCanvas';
 
 const Dashboard = ({
@@ -44,7 +43,7 @@ const Dashboard = ({
     </section>
     <br />
     <section>
-      <DashboardCanvas />
+      <DashboardCanvas macros={macros} />
     </section>
   </>
 );
