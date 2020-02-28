@@ -1,14 +1,19 @@
 import React, {
   useEffect,
+  useState,
   useRef,
 } from 'react';
 
 import Modal from '../Modal';
+import RegisterService from '../../services/register-service';
 
 const RegisterForm = ({
   toggleModal,
   modal,
 }) => {
+  const node = useRef();
+  const [email, setEmail] = useState();
+
   useEffect(() => {
     const handleClick = (e) => {
       if (node.current.contains(e.target)) {
@@ -28,7 +33,12 @@ const RegisterForm = ({
       document.removeEventListener('mousedown', handleClick);
     };
   }, [modal, toggleModal]);
-  const node = useRef();
+
+  const handleBetaRegisterSubmit = (e) => {
+    e.preventDefault();
+    RegisterService.postBetaRegister(email);
+    toggleModal();
+  };
 
   return (
     <>
@@ -47,9 +57,12 @@ const RegisterForm = ({
             EatWe11 is currently in beta before it&apos;s upcoming public release. Enter your email
             below to request access and we&apos;ll notify you as new features are released!
           </p>
-          <input type="text" />
+          <input
+            type="text"
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <button
-            onClick={() => toggleModal()}
+            onClick={(e) => handleBetaRegisterSubmit(e)}
             className="button"
             type="submit"
           >
