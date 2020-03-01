@@ -51,8 +51,8 @@ const RegisterForm = ({
         Sign Up
       </button>
       {modal && (
-        <Modal viewStyle="Landing_modal" node={node}>
-          <h3>EatWe11 Beta Register</h3>
+        <Modal viewStyle="Landing_modal gradientBox" node={node}>
+          <h3>EatWe11 Beta Registration</h3>
           <p>
             EatWe11 is currently in beta before it&apos;s upcoming public release. Enter your email
             below to request access and we&apos;ll notify you as new features are released!

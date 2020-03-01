@@ -9,7 +9,7 @@ const NavBar = ({
   modal,
 }) => {
   const navLinks = (currentLocation) => {
-    const routes = ['dashboard', 'meals', 'quiz'];
+    const routes = ['dashboard', 'meals', 'assess'];
     const links = [];
 
     (currentLocation === '/') ? links.push(

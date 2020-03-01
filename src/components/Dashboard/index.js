@@ -10,19 +10,19 @@ const Dashboard = ({
     <NavBar location={location} />
     <section>
       <div>
-        Protein
+        Protein:
         {' '}
         {Math.round(macros.protein / 4)}
         (g)
       </div>
       <div>
-        Carbohydrates
+        Carbohydrates:
         {' '}
         {Math.round(macros.carb / 4)}
         (g)
       </div>
       <div>
-        Fats
+        Fats:
         {' '}
         {Math.round(macros.fat / 9)}
         (g)
@@ -30,15 +30,18 @@ const Dashboard = ({
     </section>
     <section>
       <div>
-        TDEE
+        TDEE:
         {' '}
         {Math.round(macros.TDEE)}
-        kCal
+        {' '}
+        calories
       </div>
       <div>
-        kCal per meal
+        Calories per meal:
         {' '}
-        {Math.round(macros.TDEE / 3)}
+        {Math.round((macros.TDEE / 3) * 0.9)}
+        -
+        {Math.round((macros.TDEE / 3) * 1.1)}
       </div>
     </section>
     <br />

@@ -22,7 +22,7 @@ function App() {
         component={Meals}
       />
       <Route
-        path="/quiz"
+        path="/assess"
         component={Anthropometric}
       />
     </main>

@@ -3,7 +3,7 @@
 }
 
 html {
-  background-color: #15D18F;
+  background-color: #13A872;
   color: white;
 }
 
@@ -26,6 +26,11 @@ code {
     monospace;
 }
 
+p {
+  line-height: 1.8;
+  color: lightgrey;
+}
+
 .button {
   border: none;
   text-decoration: none;
@@ -38,8 +43,54 @@ code {
   text-decoration: underline;
 }
 
-.Anthro_list {
-  list-style: none;
+.Anthro_quizForm {
+  display: block;
+  margin: 2em auto;
+  width: 100%;
+}
+
+.Anthro_quizWrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.Anthro_quizForm label {
+  display: block;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
+
+.Anthro_quizForm input, select {
+  margin-top: 1em;
+  width: 100%;
+  border: 2px solid #012606;
+  background: #012606;
+  border-radius: 3px;
+  padding: .5em .8em .6em;
+  color: white;
+  font-size: 1.2em;
+}
+
+.Anthro_quizForm button {
+  background-color: white;
+  color: #25594A;
+  text-transform: uppercase;
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: .7em 2.2em;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
 }
 
 .Landing_section {
@@ -55,7 +106,6 @@ code {
   z-index: 1;
   width: 90vw;
   padding: 12px;
-  background: linear-gradient(to bottom right,#109E6C 0,#215240);
   border: 1px solid grey;
 }
 
@@ -79,12 +129,10 @@ code {
 }
 
 .Landing_headingText {
-  display: block;
   font-size: medium;
   font-weight: normal;
   text-align: center;
-  padding: 0.7em 1em;
-  line-height: 1.5;
+  padding: 0 1em;
 }
 
 .Landing_headingContainer {
@@ -133,7 +181,7 @@ code {
 .mealsDirectionBtn {
   font-size: 17px;
   background-color: white;
-  color: #109E6C;
+  color: #25594A;
   border: none;
 }
 
@@ -162,7 +210,7 @@ code {
 }
 
 .gradientBox {
-  background: linear-gradient(to bottom right,#109E6C 0,#215240);
+  background: linear-gradient(to bottom right, #012606 0, #0D0D0D);
 }
 
 Nav {
