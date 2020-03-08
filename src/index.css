@@ -155,19 +155,25 @@ p {
   flex-flow: column nowrap;
 }
 
+.mealsLegend {
+  width: 80%;
+  margin: 1em auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+}
+
 .mealsTitle {
   font-size: large;
   align-self: center;
+  margin-top: 0;
 }
 
-.mealsCalContainer {
-  margin: 0 auto 0.5em auto;
-}
 
 .mealsMacroContainer {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 1em 0;
+  margin: 0;
 }
 
 .mealsMacronutrient {

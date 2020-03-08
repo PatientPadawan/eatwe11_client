@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import useMountEffect from '../../hooks/mountEffect';
 
@@ -30,29 +31,26 @@ const Meal = ({
       <h2 className="mealsTitle capitalize">
         {meals.recipe.label}
       </h2>
-      <div className="mealsCalContainer">
-        Calories:
-        {' '}
-        { Math.round(meals.recipe.calories / meals.recipe.yield) }
-      </div>
       <div className="mealsMacroContainer">
         <span className="mealsMacronutrient">
-          Carbs:
+          { Math.round(meals.recipe.calories / meals.recipe.yield) }
           {' '}
-          { Math.round(meals.recipe.totalNutrients.FAT.quantity / meals.recipe.yield) }
-          g
+          <FontAwesomeIcon size="1x" icon="burn" />
         </span>
         <span className="mealsMacronutrient">
-          Proteins:
-          {' '}
           { Math.round(meals.recipe.totalNutrients.PROCNT.quantity / meals.recipe.yield) }
-          g
+          {' '}
+          <FontAwesomeIcon size="1x" icon="cubes" />
         </span>
         <span className="mealsMacronutrient">
-          Fats:
-          {' '}
           { Math.round(meals.recipe.totalNutrients.CHOCDF.quantity / meals.recipe.yield) }
-          g
+          {' '}
+          <FontAwesomeIcon size="1x" icon="tachometer-alt" />
+        </span>
+        <span className="mealsMacronutrient">
+          { Math.round(meals.recipe.totalNutrients.FAT.quantity / meals.recipe.yield) }
+          {' '}
+          <FontAwesomeIcon size="1x" icon="tint" />
         </span>
       </div>
       <div className={`mealsCollapseContainer ${meals.isActive ? '' : 'hidden'}`}>

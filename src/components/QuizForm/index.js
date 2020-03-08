@@ -10,6 +10,7 @@ const QuizForm = ({
   const [active, setActive] = useState(1.2);
   const [height, setHeight] = useState();
   const [weight, setWeight] = useState();
+  const [verification, setVerification] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,6 +32,8 @@ const QuizForm = ({
     updateMacros(macros);
     history.push('/dashboard');
   };
+
+  const isEnabled = verification === '2';
 
   return (
     <div className="Anthro_quizWrapper">
@@ -103,9 +106,21 @@ const QuizForm = ({
             <option value={2.3}>pro athlete</option>
           </select>
         </label>
+        <label htmlFor="verification">
+          Final Question
+          <br />
+          <input
+            id="verification"
+            type="number"
+            name="field6"
+            placeholder="what is 1 + 1?"
+            onChange={(e) => setVerification(e.target.value)}
+          />
+        </label>
         <button
           type="submit"
           className="button"
+          disabled={!isEnabled}
         >
           Submit
         </button>

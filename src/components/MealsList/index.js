@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import Meal from '../Meal';
 import NavBar from '../NavBar';
 import MealsService from '../../services/meals-service';
@@ -40,6 +42,28 @@ const MealsList = ({
           search
         </button>
       </form>
+      <div className="mealsLegend">
+        <div>
+          <FontAwesomeIcon size="1x" icon="burn" />
+          {' '}
+          Calories
+        </div>
+        <div>
+          <FontAwesomeIcon size="1x" icon="cubes" />
+          {' '}
+          Proteins
+        </div>
+        <div>
+          <FontAwesomeIcon size="1x" icon="tachometer-alt" />
+          {' '}
+          Carbs
+        </div>
+        <div>
+          <FontAwesomeIcon size="1x" icon="tint" />
+          {' '}
+          Fats
+        </div>
+      </div>
       {meals.map((el, i) => (
         <Meal
           key={el.recipe.uri}
