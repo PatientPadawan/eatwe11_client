@@ -54,6 +54,10 @@ p {
   margin: 0 auto;
 }
 
+.Anthro_quizForm button {
+  margin-top: 1em;
+}
+
 .Anthro_quizForm label {
   display: block;
   margin-bottom: 1em;
@@ -69,6 +73,7 @@ p {
   padding: .5em .8em .6em;
   color: white;
   font-size: 1.2em;
+  -webkit-appearance: none;
 }
 
 .Anthro_quizForm button {

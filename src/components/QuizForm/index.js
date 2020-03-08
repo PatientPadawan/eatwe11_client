@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 
 const QuizForm = ({
   updateMacros,
+  history,
 }) => {
   const [age, setAge] = useState();
   const [sex, setSex] = useState('male');
@@ -11,7 +13,6 @@ const QuizForm = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.alert('Macros updated!');
     const numWeight = parseInt(weight, 10);
     const numHeight = parseInt(height, 10);
     const numAge = parseInt(age, 10);
@@ -28,14 +29,15 @@ const QuizForm = ({
       fat: (TDEE * 0.25),
     };
     updateMacros(macros);
+    history.push('/dashboard');
   };
 
   return (
     <div className="Anthro_quizWrapper">
       <h2>Take our quiz</h2>
       <p>
-        It gives a rough estimate of your macronutrient needs. Once completed
-        head over to the meals tab to begin searching recipes!
+        It gives us a rough estimate of your macronutrient needs which we use to make recipe
+        recommendations.
       </p>
       <form className="Anthro_quizForm" onSubmit={handleSubmit}>
         <label htmlFor="height">
@@ -113,4 +115,4 @@ const QuizForm = ({
   );
 };
 
-export default QuizForm;
+export default withRouter(QuizForm);

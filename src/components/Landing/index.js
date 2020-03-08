@@ -35,7 +35,7 @@ const Landing = ({
               fit your specific profile. Transform your diet into a personalized meal plan.
             </p>
           </h2>
-          <Link to="/dashboard" className="button uppercase">explore eatwe11</Link>
+          <Link to="/assess" className="button uppercase">explore eatwe11</Link>
         </div>
       </section>
       <section>

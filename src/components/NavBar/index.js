@@ -9,14 +9,14 @@ const NavBar = ({
   modal,
 }) => {
   const navLinks = (currentLocation) => {
-    const routes = ['dashboard', 'meals', 'assess'];
+    const routes = ['assess', 'dashboard', 'meals'];
     const links = [];
 
     (currentLocation === '/') ? links.push(
       <RegisterForm key="sign-up" toggleModal={toggleModal} modal={modal} />,
       <Link
         key="demo"
-        to="/dashboard"
+        to="/assess"
         className="Nav_links capitalize"
       >
         demo
