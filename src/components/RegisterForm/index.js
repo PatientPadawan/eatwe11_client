@@ -12,7 +12,7 @@ const RegisterForm = ({
   modal,
 }) => {
   const node = useRef();
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState(null);
 
   useEffect(() => {
     const handleClick = (e) => {
@@ -40,6 +40,14 @@ const RegisterForm = ({
     toggleModal();
   };
 
+  const isEnabled = () => {
+    const regExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (regExp.test(email)) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <>
       <button
@@ -65,6 +73,7 @@ const RegisterForm = ({
             onClick={(e) => handleBetaRegisterSubmit(e)}
             className="button"
             type="submit"
+            disabled={!isEnabled()}
           >
             Send Request
           </button>
