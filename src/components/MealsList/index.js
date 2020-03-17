@@ -37,7 +37,7 @@ const MealsList = ({
         />
         <button
           type="submit"
-          className="button"
+          className="button capitalize"
         >
           search
         </button>

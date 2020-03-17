@@ -18,6 +18,9 @@ const DashboardCanvas = ({
   const options = {
     legend: {
       position: 'right',
+      labels: {
+        fontColor: 'white',
+      },
     },
   };
 

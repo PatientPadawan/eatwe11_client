@@ -43,6 +43,24 @@ p {
   text-decoration: underline;
 }
 
+.blurred {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+#logo {
+  font-size: large;
+  margin-left: .75em;
+}
+
 .Anthro_quizForm {
   display: block;
   margin: 2em auto;
@@ -114,19 +132,6 @@ p {
   border: 1px solid grey;
 }
 
-.blurred {
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-}
-
-.capitalize {
-  text-transform: capitalize;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
 .Landing_heading {
   display: block;
   font-size: x-large;
@@ -145,6 +150,26 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.macroCard {
+  width: 100%;
+  padding: 1em 0;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.macroCardMacros {
+  margin-top: 0.5em;
+}
+
+.macroCardText {
+  color: lightgrey;
+}
+
+.macroCardWrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .meals {
@@ -169,7 +194,6 @@ p {
   margin-top: 0;
 }
 
-
 .mealsMacroContainer {
   display: flex;
   justify-content: space-between;
@@ -183,10 +207,6 @@ p {
 .mealsCollapseContainer {
   display: flex;
   flex-direction: column;
-}
-
-.hidden {
-  display: none;
 }
 
 .mealsDirectionBtn {
@@ -210,6 +230,7 @@ p {
 .mealsImage {
   width: 60vw;
   border-radius: 3px;
+  margin-top: 1em;
 }
 
 .mealsImageContainer {
@@ -229,10 +250,6 @@ Nav {
   justify-content: space-around;
 }
 
-#logo {
-  font-size: large;
-}
-
 .Nav_linksContainer {
   display: inline;
   align-self: center;
@@ -247,4 +264,8 @@ Nav {
 .Nav_links {
   padding: 0 1em 0 0;
   display: inline-block;
+}
+
+.hidden {
+  display: none;
 }
