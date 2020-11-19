@@ -3,8 +3,13 @@
 }
 
 html {
-  background-color: #13A872;
-  color: white;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
 }
 
 a {
@@ -26,9 +31,24 @@ code {
     monospace;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
 p {
   line-height: 1.8;
-  color: lightgrey;
+  color: white;
+  background: #444444;
+  border-radius: 3px;
 }
 
 .button {
@@ -37,6 +57,14 @@ p {
   display: inline-block;
   background-color: inherit;
   color: unset;
+  padding: 0;
+}
+
+.header {
+  position: absolute;
+  top: 1.5em;
+  width: 100%;
+  z-index: 10;
 }
 
 .selected {
@@ -57,8 +85,8 @@ p {
 }
 
 #logo {
-  font-size: large;
-  margin-left: .75em;
+  font-size: 1.5em;
+  margin: 0;
 }
 
 .Anthro_quizForm {
@@ -69,7 +97,11 @@ p {
 
 .Anthro_quizWrapper {
   width: 85%;
-  margin: 0 auto;
+  margin: 5em auto 0;
+}
+
+.anthroQuizText {
+  padding: .5em .8em .6em;
 }
 
 .Anthro_quizForm button {
@@ -85,8 +117,8 @@ p {
 .Anthro_quizForm input, select {
   margin-top: 1em;
   width: 100%;
-  border: 2px solid #012606;
-  background: #012606;
+  border: 2px solid #444444;
+  background: #444444;
   border-radius: 3px;
   padding: .5em .8em .6em;
   color: white;
@@ -95,25 +127,37 @@ p {
 }
 
 .Anthro_quizForm button {
-  background-color: white;
-  color: #25594A;
+  background-color: #444444;
+  color: white;
   text-transform: uppercase;
-  border: 2px solid white;
+  border: 2px solid #444444;
   border-radius: 3px;
   padding: .7em 2.2em;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 1; /* Firefox */
+.betaModalText {
+  background: transparent;
+  color: #444444;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.inputSubmitBtn {
+  background: black;
   color: white;
+  border: 2px solid black;
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 1px 2px;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: white;
+.inputHeavyStyle {
+  flex-grow: 4;
+  border-radius: 0;
+  border: 2px solid black;
+}
+
+.betaModalInputBtnWrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .Landing_section {
@@ -142,7 +186,8 @@ p {
   font-size: medium;
   font-weight: normal;
   text-align: center;
-  padding: 0 1em;
+  margin: 1em;
+  padding: .5em .8em .6em;
 }
 
 .Landing_headingContainer {
@@ -154,7 +199,7 @@ p {
 
 .macroCard {
   width: 100%;
-  padding: 1em 0;
+  padding: 0 0 2em;
   line-height: 1.8;
   text-align: center;
 }
@@ -164,12 +209,13 @@ p {
 }
 
 .macroCardText {
-  color: lightgrey;
+  color: black;
 }
 
 .macroCardWrapper {
   display: flex;
   flex-direction: column;
+  margin: 5em 0 0;
 }
 
 .meals {
@@ -178,6 +224,10 @@ p {
   border-radius: 3px;
   display: flex;
   flex-flow: column nowrap;
+}
+
+.mealsWrapper {
+  margin: 5em 0;
 }
 
 .mealsLegend {
@@ -212,7 +262,7 @@ p {
 .mealsDirectionBtn {
   font-size: 17px;
   background-color: white;
-  color: #25594A;
+  color: black;
   border: none;
 }
 
@@ -238,34 +288,50 @@ p {
 }
 
 .mealsSearchForm {
+  display: flex;
   text-align: center;
+  margin: 1em;
 }
 
 .gradientBox {
-  background: linear-gradient(to bottom right, #012606 0, #0D0D0D);
+  background: linear-gradient(to bottom right, white 0, #8a8686);
 }
 
-Nav {
+nav {
   display: flex;
-  justify-content: space-around;
-}
-
-.Nav_linksContainer {
-  display: inline;
-  align-self: center;
-  font-size: medium;
-}
-
-#Nav_signUp {
-  font-size: medium;
-  padding: 0 1em 0 0;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 1em;
 }
 
 .Nav_links {
-  padding: 0 1em 0 0;
-  display: inline-block;
+  font-size: small;
+  padding: 0 .75em;
+}
+
+.navLinksContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navLinksIconsWrapper {
+  border: solid 2px black;
+  border-radius: 50%;
+  padding: .5em;
+}
+/* REMEMBER TO CHANGE DISPLAY IN LARGER VIEW SCREENS */
+.navLinksText {
+  display: none;
+}
+
+#navSignUp {
+  padding-top: 0.1em;
 }
 
 .hidden {
   display: none;
+}
+
+#query {
+  flex-grow: 4;
 }

@@ -16,21 +16,21 @@ const Dashboard = ({
         <div className="macroCardMacros">
           {Math.round(macros.protein / 4)}
         </div>
-        <div className="macroCardText">Grams of Protein Daily</div>
+        <div className="macroCardText">Proteins(g)</div>
       </div>
       <div className="macroCard">
         <div><FontAwesomeIcon size="3x" icon="tachometer-alt" /></div>
         <div className="macroCardMacros">
           {Math.round(macros.carb / 4)}
         </div>
-        <div className="macroCardText">Grams of Carbohydrates Daily</div>
+        <div className="macroCardText">Carbohydrates(g)</div>
       </div>
       <div className="macroCard">
         <div><FontAwesomeIcon size="3x" icon="tint" /></div>
         <div className="macroCardMacros">
           {Math.round(macros.fat / 9)}
         </div>
-        <div className="macroCardText">Grams of Fat Daily</div>
+        <div className="macroCardText">Fats(g)</div>
       </div>
       <div className="macroCard">
         <div><FontAwesomeIcon size="3x" icon="burn" /></div>

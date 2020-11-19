@@ -17,6 +17,9 @@ const Meal = ({
         styles: {
           size: 'compact',
           type: 'modal',
+          button: {
+            color: '#000000',
+          },
         },
       });
     });

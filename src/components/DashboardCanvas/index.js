@@ -6,7 +6,7 @@ const DashboardCanvas = ({
 }) => {
   const data = {
     datasets: [{
-      backgroundColor: ['#085238', '#57D9AB', '#109E6C'],
+      backgroundColor: ['#444444', '#000000', '#888888'],
       data: [macros.protein, macros.carb, macros.fat],
     }],
     labels: [
@@ -19,7 +19,7 @@ const DashboardCanvas = ({
     legend: {
       position: 'right',
       labels: {
-        fontColor: 'white',
+        fontColor: 'black',
       },
     },
   };

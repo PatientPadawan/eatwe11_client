@@ -29,10 +29,10 @@ const Landing = ({
         <NavBar location={location} toggleModal={toggleModal} modal={modal} />
         <div className="Landing_headingContainer">
           <h2>
-            <span className="Landing_heading">Recipes for you</span>
+            <span className="Landing_heading">Eat like a scientist</span>
             <p className="Landing_headingText">
               EatWe11 helps you become aware of your macronutrient needs. We provide recipes to
-              fit your specific profile. Transform your diet into a personalized meal plan.
+              fit your specific profile. Transform your diet into a personalized meal plan today.
             </p>
           </h2>
           <Link to="/assess" className="button uppercase">explore eatwe11</Link>

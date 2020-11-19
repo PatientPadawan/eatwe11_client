@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 import RegisterForm from '../RegisterForm';
 
@@ -9,7 +11,16 @@ const NavBar = ({
   modal,
 }) => {
   const navLinks = (currentLocation) => {
-    const routes = ['assess', 'dashboard', 'meals'];
+    const routes = [{
+      address: 'assess',
+      icon: 'pencil-alt',
+    }, {
+      address: 'dashboard',
+      icon: 'chart-pie',
+    }, {
+      address: 'meals',
+      icon: 'list-ul',
+    }];
     const links = [];
 
     (currentLocation === '/') ? links.push(
@@ -23,23 +34,30 @@ const NavBar = ({
       </Link>,
     ) : routes.forEach((route) => links.push(
       <Link
-        key={route}
-        to={`/${route}`}
-        className={`Nav_links capitalize ${(currentLocation === `/${route}`) ? 'selected' : ''}`}
+        key={route.address}
+        to={`/${route.address}`}
+        className={`Nav_links capitalize ${(currentLocation === `/${route.address}`) ? 'selected' : ''}`}
       >
-        {`${route}`}
+        <div className='navLinksIconsWrapper'>
+          <FontAwesomeIcon icon={`${route.icon}`} />
+        </div>
+        <span className='navLinksText'>
+          {`${route.address}`}
+        </span>
       </Link>,
     ));
     return links;
   };
 
   return (
-    <nav role="navigation">
-      <Link to="/" className="Nav_links"><h1 id="logo">EATWE11</h1></Link>
-      <div className="Nav_linksContainer">
-        {navLinks(location)}
-      </div>
-    </nav>
+    <header className="header">
+      <nav role="navigation">
+        <Link to="/"><h1 id="logo">EATWE11</h1></Link>
+        <div className="navLinksContainer">
+          {navLinks(location)}
+        </div>
+      </nav>
+    </header>
   );
 };
 

@@ -28,49 +28,52 @@ const MealsList = ({
   return (
     <>
       <NavBar location={location} />
-      <form onSubmit={handleSubmit} className="mealsSearchForm">
-        <input
-          type="text"
-          id="query"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button
-          type="submit"
-          className="button capitalize"
-        >
-          search
-        </button>
-      </form>
-      <div className="mealsLegend">
-        <div>
-          <FontAwesomeIcon size="1x" icon="burn" />
-          {' '}
-          Calories
+      <div className="mealsWrapper">
+        <form onSubmit={handleSubmit} className="mealsSearchForm">
+          <input
+            type="text"
+            id="query"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="inputHeavyStyle"
+          />
+          <button
+            type="submit"
+            className="button inputSubmitBtn"
+          >
+            search
+          </button>
+        </form>
+        <div className="mealsLegend">
+          <div>
+            <FontAwesomeIcon size="1x" icon="burn" />
+            {' '}
+            Calories
+          </div>
+          <div>
+            <FontAwesomeIcon size="1x" icon="cubes" />
+            {' '}
+            Proteins
+          </div>
+          <div>
+            <FontAwesomeIcon size="1x" icon="tachometer-alt" />
+            {' '}
+            Carbs
+          </div>
+          <div>
+            <FontAwesomeIcon size="1x" icon="tint" />
+            {' '}
+            Fats
+          </div>
         </div>
-        <div>
-          <FontAwesomeIcon size="1x" icon="cubes" />
-          {' '}
-          Proteins
-        </div>
-        <div>
-          <FontAwesomeIcon size="1x" icon="tachometer-alt" />
-          {' '}
-          Carbs
-        </div>
-        <div>
-          <FontAwesomeIcon size="1x" icon="tint" />
-          {' '}
-          Fats
-        </div>
+        {meals.map((el, i) => (
+          <Meal
+            key={el.recipe.uri}
+            meals={meals[i]}
+            toggleMeal={toggleMeal}
+          />
+        ))}
       </div>
-      {meals.map((el, i) => (
-        <Meal
-          key={el.recipe.uri}
-          meals={meals[i]}
-          toggleMeal={toggleMeal}
-        />
-      ))}
     </>
   );
 };

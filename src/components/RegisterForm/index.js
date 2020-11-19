@@ -51,32 +51,35 @@ const RegisterForm = ({
   return (
     <>
       <button
-        className="button"
+        className="button Nav_links capitalize"
         onClick={() => toggleModal()}
-        id="Nav_signUp"
+        id="navSignUp"
         type="button"
       >
-        Sign Up
+        sign up
       </button>
       {modal && (
         <Modal viewStyle="Landing_modal gradientBox" node={node}>
-          <h3>EatWe11 Beta Registration</h3>
-          <p>
-            EatWe11 is currently in beta before it&apos;s upcoming public release. Enter your email
+          <h3>Beta Registration</h3>
+          <p className="betaModalText">
+            EatWe11 is currently in beta before it&apos;s upcoming public release. <br />Enter your email
             below to request access and we&apos;ll notify you as new features are released!
           </p>
-          <input
-            type="text"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <button
-            onClick={(e) => handleBetaRegisterSubmit(e)}
-            className="button"
-            type="submit"
-            disabled={!isEnabled()}
-          >
-            Send Request
-          </button>
+          <div className="betaModalInputBtnWrapper">
+            <input
+              className="inputHeavyStyle"
+              type="text"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button
+              onClick={(e) => handleBetaRegisterSubmit(e)}
+              className="button inputSubmitBtn"
+              type="submit"
+              disabled={!isEnabled()}
+            >
+              submit
+            </button>
+          </div>
         </Modal>
       )}
     </>

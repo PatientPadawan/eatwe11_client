@@ -37,9 +37,9 @@ const QuizForm = ({
 
   return (
     <div className="Anthro_quizWrapper">
-      <h2>Take our quiz</h2>
-      <p>
-        It gives us a rough estimate of your macronutrient needs which we use to make recipe
+      <h2>Take the quiz</h2>
+      <p className="anthroQuizText">
+        It gives an estimate of your macronutrient needs which are used to provide recipe
         recommendations.
       </p>
       <form className="Anthro_quizForm" onSubmit={handleSubmit}>
